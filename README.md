@@ -1,8 +1,8 @@
-A Dart-based client for Ravencoin ElectrumX servers
+A Dart-based client for Radiant ElectrumX servers
 
 ## Notes
 
-The Ravencoin ElectrumX server is quite similar to the Bitcion Electrum server, but has additional methods that allow clients to handle asset issuance and transferral.
+The Radiant ElectrumX server is quite similar to the Bitcion Electrum server, but has additional methods that allow clients to handle asset issuance and transferral.
 
 ## Usage
 
@@ -11,7 +11,7 @@ import 'package:electrum_adapter/electrum_adapter.dart';
 
 void main() async {
   var client =
-      await RavenElectrumClient.connect('testnet.rvn.rocks', port: 50002);
+      await RadiantElectrumClient.connect('testnet.rvn.rocks', port: 50022);
   var features = await client.features();
   print(features);
   await client.close();

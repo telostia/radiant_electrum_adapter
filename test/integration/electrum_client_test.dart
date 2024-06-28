@@ -4,22 +4,22 @@ import 'package:electrum_adapter/electrum_adapter.dart';
 
 void main() {
   group('electrum_client', () {
-    late RavenElectrumClient client;
+    late RadiantElectrumClient client;
     setUp(() async {
       // Our mainnet server:
-      // var channel = await connect('143.198.142.78', port: 50002);
+      // var channel = await connect('143.198.142.78', port: 50022);
 
       // Our testnet server:
       // var channel = await connect('143.198.142.78', port: 50012);
 
-      // Raven Foundation testnet server:
+      // Radiant Foundation testnet server:
       // var channel = await connect('168.119.100.140', port: 50012);
 
       // HyperPeek's testnet server:
-      var channel = await connect('testnet.rvn.rocks', port: 50002);
-      //var channel = await connect('mainnet.rvn.rocks', port: 50002);
+      var channel = await connect('testnet.rvn.rocks', port: 50022);
+      //var channel = await connect('mainnet.rvn.rocks', port: 50022);
 
-      client = RavenElectrumClient(channel);
+      client = RadiantElectrumClient(channel);
     });
 
     test('get unspent', () async {

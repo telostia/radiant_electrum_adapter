@@ -8,14 +8,14 @@ void main() {
   setUp(() => server = MockElectrumServer());
 
   group('ElectrumClient', () {
-    late RavenElectrumClient client;
-    setUp(() => client = RavenElectrumClient(server.channel));
+    late RadiantElectrumClient client;
+    setUp(() => client = RadiantElectrumClient(server.channel));
 
     test('gets server features', () async {
       server.willRespondWith('features', {
         'hosts': {},
         'pruning': null,
-        'server_version': 'ElectrumX Ravencoin 1.9',
+        'server_version': 'ElectrumX Radiant 1.9',
         'protocol_min': '1.4',
         'protocol_max': '1.9',
         'genesis_hash':

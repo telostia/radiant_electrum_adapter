@@ -5,11 +5,11 @@ import 'package:electrum_adapter/client/base_client.dart';
 void main() {
   group('BaseClient', () {
     test('connects', () async {
-      var channel = await connect('testnet.rvn.rocks');
+      var channel = await connect('electrumx2.radiant4people.com');
       var client = BaseClient(channel);
       var response = await client.request('server.features');
       expect(response['genesis_hash'],
-          '000000ecfc5e6324a079542221d00e10362bdc894d56500c414060eea8a3ad5a');
+          '0000000065d8ed5d8be28d6876b3ffb660ac2a6c0ca59e437e1f7a6f4e003fb4');
     });
   });
 }

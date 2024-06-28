@@ -1,6 +1,6 @@
-/// An Electrum client for RavenCoin.
+/// An Electrum client for Radiant.
 ///
-/// Connects with https://github.com/Electrum-RVN-SIG/electrumx-ravencoin
+/// Connects with https://github.com/Electrum-RVN-SIG/electrumx-radiant
 library electrum_adapter;
 
 import 'dart:async';
@@ -37,19 +37,19 @@ class Header {
   Header(this.hex, this.height);
 }
 
-/// Methods on RavenElectrumClient are defined in the `methods` directory.
-/// See https://electrumx-ravencoin.readthedocs.io/en/latest/protocol-methods.html
-class RavenElectrumClient extends SubscribingClient {
-  RavenElectrumClient(channel) : super(channel);
+/// Methods on RadiantElectrumClient are defined in the `methods` directory.
+/// See https://electrumx-radiant.readthedocs.io/en/latest/protocol-methods.html
+class RadiantElectrumClient extends SubscribingClient {
+  RadiantElectrumClient(channel) : super(channel);
   String clientName = 'MTWallet';
   String clientVersion = '1.0';
   String host = '';
   String protocolVersion = '1.10';
-  int port = 50002;
+  int port = 50022;
 
-  static Future<RavenElectrumClient> connect(
+  static Future<RadiantElectrumClient> connect(
     String host, {
-    int port = 50002,
+    int port = 50022,
     Duration connectionTimeout = conn.connectionTimeout,
     Duration aliveTimerDuration = conn.aliveTimerDuration,
     bool acceptUnverified = true,
@@ -57,7 +57,7 @@ class RavenElectrumClient extends SubscribingClient {
     String clientVersion = '1.0',
     String protocolVersion = '1.10',
   }) async {
-    var client = RavenElectrumClient(await conn.connect(
+    var client = RadiantElectrumClient(await conn.connect(
       host,
       port: port,
       connectionTimeout: connectionTimeout,
@@ -75,5 +75,5 @@ class RavenElectrumClient extends SubscribingClient {
   }
 
   @override
-  String toString() => 'RavenElectrumClient connected to $host:$port';
+  String toString() => 'RadiantElectrumClient connected to $host:$port';
 }

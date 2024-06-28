@@ -17,7 +17,7 @@ import 'package:stack_trace/stack_trace.dart';
 class BaseClient {
   /// We use a Peer here--which implements both Server and Client sides of a
   /// Remote Procedure Call (RPC) interface--to communicate with an ElectrumX
-  /// Ravencoin server. We do so because we need:
+  /// Radiant server. We do so because we need:
   ///
   /// - the Client side for the basic ability to call 'procedures' on the
   ///   remote server (e.g. 'blockchain.scripthash.get_balance');

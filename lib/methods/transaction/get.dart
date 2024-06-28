@@ -221,7 +221,7 @@ class TxVout with EquatableMixin {
   String? get assetMemo => scriptPubKey.assetMemo; // transactional asset memo
 }
 
-/// htelectrumx-ravencoin.readthedocs.io/en/latest/protocol-methods.html#blockchain-transaction-get
+/// htelectrumx-radiant.readthedocs.io/en/latest/protocol-methods.html#blockchain-transaction-get
 /// { txid: e86f693b46f1ca33480d904acd526079ba7585896cff6d0ae5dcef322d9dc52a,
 ///   hash: ccabf8580cc55890cba647960bf52760f37caf1923b2f184198e424fd356e3d2,
 ///   version: 2,
@@ -299,7 +299,7 @@ class Tx with EquatableMixin {
   }
 }
 
-extension GetTransactionMethod on RavenElectrumClient {
+extension GetTransactionMethod on RadiantElectrumClient {
   Future<Tx> getTransaction(String txHash) async {
     var response = Map<String, dynamic>.from(await request(
       'blockchain.transaction.get',

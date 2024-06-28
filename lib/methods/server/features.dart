@@ -1,6 +1,6 @@
 import '../../electrum_adapter.dart';
 
-extension FeaturesMethod on RavenElectrumClient {
+extension FeaturesMethod on RadiantElectrumClient {
   Future<Map<String, dynamic>> features() async =>
-      await request('server.features');
+      await request('server.version');
 }

@@ -3,10 +3,17 @@ import 'package:electrum_adapter/electrum_adapter.dart';
 
 void main() {
   group('subscriptions', () {
-    late RavenElectrumClient client;
+    late RadiantElectrumClient client;
     setUp(() async {
-      client =
-          await RavenElectrumClient.connect('testnet.rvn.rocks', port: 50002);
+      client = await RadiantElectrumClient.connect(
+          'electrumx2.radiant4people.com',
+          port: 50022);
+    });
+
+    test('server.version', () async {
+      var results =
+          await client.serverVersion(clientName: '1', protocolVersion: '1.9');
+      expect(results, 0.01);
     });
 
     test('getMeta', () async {

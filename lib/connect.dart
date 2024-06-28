@@ -12,7 +12,7 @@ const aliveTimerDuration = Duration(seconds: 2);
 
 Future<StreamChannel> connect(
   String host, {
-  int port = 50002,
+  int port = 50022,
   Duration connectionTimeout = connectionTimeout,
   Duration aliveTimerDuration = aliveTimerDuration,
   bool acceptUnverified = true,

@@ -1,6 +1,6 @@
 import '../../electrum_adapter.dart';
 
-extension BroadcastTransactionMethod on RavenElectrumClient {
+extension BroadcastTransactionMethod on RadiantElectrumClient {
   Future<String> broadcastTransaction(String rawTx) async => await request(
         'blockchain.transaction.broadcast',
         [rawTx],

@@ -42,7 +42,7 @@ class ServerStats {
   }
 }
 
-extension GetOurStatsMethod on RavenElectrumClient {
+extension GetOurStatsMethod on RadiantElectrumClient {
   Future<dynamic> getOurStats() async {
     var proc = 'server.our_stats';
     dynamic stats = await request(proc);

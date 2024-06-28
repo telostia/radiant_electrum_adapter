@@ -2,7 +2,7 @@ import 'package:test/test.dart';
 import 'package:electrum_adapter/connect.dart';
 import 'package:electrum_adapter/client/subscribing_client.dart';
 
-const ravencoinBlockTime = Duration(seconds: 60);
+const radiantBlockTime = Duration(seconds: 60);
 
 void main() {
   group('SubscribingClient', () {
@@ -11,11 +11,11 @@ void main() {
       // Our testnet server:
       var channel = await connect('143.198.142.78', port: 50012);
 
-      // Raven Foundation testnet server:
+      // Radiant Foundation testnet server:
       // var channel = await connect('168.119.100.140', port: 50012);
 
       // HyperPeek's testnet server:
-      // var channel = await connect('testnet.rvn.rocks', port: 50002);
+      // var channel = await connect('testnet.rvn.rocks', port: 50022);
 
       client = SubscribingClient(channel);
     });
@@ -33,6 +33,6 @@ void main() {
       expect(results.length, 2);
       expect(results[0].keys, ['hex', 'height']);
       expect(results[1].keys, ['hex', 'height']);
-    }, timeout: Timeout(ravencoinBlockTime * 2));
+    }, timeout: Timeout(radiantBlockTime * 2));
   });
 }

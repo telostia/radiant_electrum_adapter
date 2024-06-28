@@ -6,9 +6,9 @@ class ServerVersion {
   ServerVersion(this.name, this.protocol);
 }
 
-extension ServerVersionMethod on RavenElectrumClient {
+extension ServerVersionMethod on RadiantElectrumClient {
   Future<ServerVersion> serverVersion({
-    String clientName = 'RavenElectrumClient',
+    String clientName = 'RadiantElectrumClient',
     String protocolVersion = '1.9',
   }) async {
     var proc = 'server.version';

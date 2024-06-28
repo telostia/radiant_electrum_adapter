@@ -7,10 +7,10 @@ import '../mock_electrum_server.dart';
 void main() {
   group('subscriptions', () {
     late MockElectrumServer server;
-    late RavenElectrumClient client;
+    late RadiantElectrumClient client;
     setUp(() {
       server = MockElectrumServer();
-      client = RavenElectrumClient(server.channel);
+      client = RadiantElectrumClient(server.channel);
     });
 
     test('getBalance', () async {
