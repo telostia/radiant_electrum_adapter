@@ -3,6 +3,6 @@
 git:
 	git add .
 	git commit -m "[$t]: $m"
-	git push -u gitea $b
+	git push -u github $b
 
 .PHONY: git
